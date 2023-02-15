@@ -36,7 +36,7 @@ def get_img(sanitized_img_links, file_name):
         get = requests.get(do_magic, headers=headers)
         if get.status_code == 200:
             x+=1
-            with open(r"/Users/ghaliabdelhai/Desktop/Power Brands/products/off-white/4/{}".format(make_string(file_name, x)), "wb") as f:
+            with open(r"/{}".format(make_string(file_name, x)), "wb") as f:
                     f.write(get.content)
         else:
             print(get.status_code)
